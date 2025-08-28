@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_Dashboard.css" />
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+		<script src="../../js/filter.js"></script>
+	</head>
+
+	<body>
+		<div class="banner">
+			<div class="container flex-center">
+				<div class="advertiment">
+					<span class="adv-desc">New feature Introduced !</span>
+					<span class="adv-title">
+						<i class="bx bx-game"></i>Gamified Store</span
+					>
+					<a href="#"><button class="adv-btn">Enter</button></a>
+					<img src="../../img/rabbit.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="explore">
+			<div class="container">
+				<div class="explore-title">
+					<span>New Releases</span>
+				</div>
+				<div class="filter">
+					<ul class="filter-list">
+						<li>
+							<button class="filter-item active">
+								Learning Material
+							</button>
+						</li>
+						<li>
+							<button class="filter-item">Basic Quiz</button>
+						</li>
+						<li>
+							<button class="filter-item">
+								Leaderboard Quiz
+							</button>
+						</li>
+					</ul>
+				</div>
+
+				<!-- if got result -->
+
+				<div class="result-yes">
+					<div class="result-list">
+						<a href="#">
+							<div class="result-card">
+								<div class="card-banner">
+									<span
+										><i class="bx bx-spreadsheet"></i
+									></span>
+									<span class="card-type"
+										>Multiple Choice Question</span
+									>
+								</div>
+								<div class="card-content">
+									<div class="card-title">
+										How to Boob sekolah in abu becker way
+									</div>
+									<div class="card-category">
+										Learning Material
+									</div>
+									<div class="card-level">
+										12 years old and above
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="extra">
+						<button class="extra-btn">
+							<a href="#">
+								<i class="bx bx-chevron-right"></i>
+							</a>
+						</button>
+						<span>View More</span>
+					</div>
+				</div>
+
+				<!-- if no result -->
+
+				<!-- <div class="result-no">
+					<div class="result-list-no">
+						<span><i class="bx bxs-binoculars"></i></span>
+						<span>Oops, nothing here yet...</span>
+						<span>Try and look for another.</span>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</body>
+</html>

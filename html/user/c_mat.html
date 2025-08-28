@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create Quiz</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_quiz.css" />
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+		<script src="../../js/c_material_reading.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Chivo", sans-serif;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			.container {
+				width: 1190px;
+				margin: 0 auto;
+			}
+
+			nav {
+				background-color: #f3f2ff;
+				height: 60px;
+				width: 100%;
+				display: flex;
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				box-shadow: #8389b5 0px 0px 50px;
+				transition: all 1s ease;
+				/* border-bottom: #161a30 1px solid !important; */
+				/* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -2px rgba(0, 0, 0, 0.1); */
+			}
+
+			.no-shadow {
+				box-shadow: none;
+			}
+
+			.nav-flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				cursor: pointer;
+			}
+
+			.logo a {
+				text-decoration: none;
+			}
+
+			.logo span {
+				font-size: 22px;
+				font-weight: bold;
+				color: #33384f;
+				font-family: "Shrikhand", serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.logo .orange {
+				color: #de581b;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- content -->
+		<div class="uni-wrapper">
+			<div class="container flex-col">
+				<div class="content-container">
+					<!-- directory -->
+					<div class="directory">
+						<a href="">
+							<button><i class="bx bx-arrow-back"></i></button>
+						</a>
+					</div>
+
+					<!-- title -->
+					<div class="title-box">
+						<div class="title">
+							<span>Material Title</span>
+						</div>
+						<div class="title-details">
+							<span>Storyboard Reading</span>
+							<span class="symbol-directory">,</span>
+							<span>12 years old and above</span>
+						</div>
+						<div class="title-date">
+							<span>Created on 29/3/2024</span>
+							<span class="symbol-directory">,</span>
+							<span>Last updated on 28/5/2024</span>
+						</div>
+					</div>
+
+					<div class="mat-wrapper">
+						<!-- mat template story-->
+						<div class="template">
+							<div class="story">
+								<div class="question-header">
+									<span class="numbering">Story 1</span>
+									<button>
+										<i class="bx bxs-user-voice"></i>
+									</button>
+								</div>
+
+								<div class="mat-story">
+									<div class="story-img-holder">
+										<img
+											src="../../img/capybaraCat.jpeg"
+											alt="story"
+										/>
+									</div>
+									<div class="story-text" id="storyText">
+										<span>
+											Once upon a time, there was a
+											capybara who lived in the forest. He
+											was a very friendly capybara and he
+											had many friends in the forest. One
+											day, he met a cat who was lost in
+											the forest. The capybara helped the
+											cat find her way home. The cat was
+											very grateful and she became friends
+											with the capybara. They had many
+											adventures together and they lived
+											happily ever after.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- mat template paragraph-->
+						<div class="template">
+							<div class="paragraph">
+								<div class="question-header">
+									<span class="numbering">Paragraph 1</span>
+									<button>
+										<i class="bx bxs-user-voice"></i>
+									</button>
+								</div>
+
+								<div class="mat-parag">
+									<div class="story-text" id="storyText">
+										<span>
+											Bali is predominantly a Hindu
+											country. Bali is known for its
+											elaborate, traditional dancing. The
+											dancing is inspired by its Hindi
+											beliefs. Most of the dancing
+											portrays tales of good versus evil.
+											To watch the dancing is a
+											breathtaking experience. Lombok has
+											some impressive points of interest –
+											the majestic Gunung Rinjani is an
+											active volcano. It is the second
+											highest peak in Indonesia. Art is a
+											Balinese passion. Batik paintings
+											and carved statues make popular
+											souvenirs. Artists can be seen
+											whittling and painting on the
+											streets, particularly in Ubud. It is
+											easy to appreciate each island as an
+											attractive tourist destination.
+											Majestic scenery; rich culture;
+											white sands and warm, azure waters
+											draw visitors like magnets every
+											year. Snorkelling and diving around
+											the nearby Gili Islands is
+											magnificent. Marine fish, starfish,
+											turtles and coral reef are present
+											in abundance. Bali and Lombok are
+											part of the Indonesian archipelago.
+											Bali has some spectacular temples.
+											The most significant is the Mother
+											Temple, Besakih. The inhabitants of
+											Lombok are mostly Muslim with a
+											Hindu minority. Lombok remains the
+											most understated of the two islands.
+											Lombok has several temples worthy of
+											a visit, though they are less
+											prolific. Bali and Lombok are
+											neighbouring islands.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- mat template sfc-->
+						<div class="template">
+							<form action="#">
+								<div class="sfc">
+									<div class="question-header">
+										<span class="numbering">
+											Simple Fash Card 1
+										</span>
+										<button>
+											<i class="bx bxs-user-voice"></i>
+										</button>
+									</div>
+
+									<div class="mat-sfc flex-row">
+										<div class="sfc-img-holder">
+											<img
+												src="../../img/capybaraPig.jpeg"
+												alt="story"
+											/>
+										</div>
+										<div class="sfc-text flex-col">
+											<span class="lecture">
+												CAPYBARA
+											</span>
+											<textarea
+												name=""
+												id=""
+												class="tutorial"
+												placeholder="Try spelling here..."
+											></textarea>
+											<!-- <input
+											type="button"
+											value="Check"
+											class="confetti-button"
+											onclick="celebrate()"
+										/> -->
+											<input
+												type="button"
+												value="Check"
+												class="wrong"
+												onclick="showError()"
+											/>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<!-- mat template afc-->
+						<div class="template">
+							<form action="#">
+								<div class="afc">
+									<div class="question-header">
+										<span class="numbering">
+											Advanced Fash Card 1
+										</span>
+										<button>
+											<i class="bx bxs-user-voice"></i>
+										</button>
+									</div>
+
+									<div class="mat-afc flex-row">
+										<div class="afc-img-holder">
+											<img
+												src="../../img/capybaraRabbit.jpeg"
+												alt="story"
+											/>
+										</div>
+										<div class="afc-text flex-col">
+											<span class="lecture">
+												CAPYBARA
+											</span>
+											<span class="desc">
+												The capybara or greater capybara
+												(Hydrochoerus hydrochaeris) is a
+												giant cavy rodent native to
+												South America
+											</span>
+											<textarea
+												name=""
+												id=""
+												class="tutorial"
+												placeholder="Try spelling here..."
+											></textarea>
+											<input
+												type="button"
+												value="Check"
+												class="confetti-button"
+												onclick="celebrate()"
+											/>
+											<!-- <input
+											type="button"
+											value="Check"
+											class="wrong"
+											onclick="showError()"
+										/> -->
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

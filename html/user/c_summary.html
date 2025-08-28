@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Summary</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_summary.css" />
+		<!-- <link rel="stylesheet" href="../../css/c_quiz.css" /> -->
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Chivo", sans-serif;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			.container {
+				width: 1190px;
+				margin: 0 auto;
+			}
+
+			nav {
+				background-color: #f3f2ff;
+				height: 60px;
+				width: 100%;
+				display: flex;
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				box-shadow: #8389b5 0px 0px 50px;
+				transition: all 1s ease;
+				/* border-bottom: #161a30 1px solid !important; */
+				/* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -2px rgba(0, 0, 0, 0.1); */
+			}
+
+			.no-shadow {
+				box-shadow: none;
+			}
+
+			.nav-flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				cursor: pointer;
+			}
+
+			.logo a {
+				text-decoration: none;
+			}
+
+			.logo span {
+				font-size: 22px;
+				font-weight: bold;
+				color: #33384f;
+				font-family: "Shrikhand", serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.logo .orange {
+				color: #de581b;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- content -->
+		<div class="uni-wrapper">
+			<div class="container flex-col">
+				<div class="content-container">
+					<div class="backgound">
+						<div class="cong-header">
+							<div class="cong-title">
+								<span>Well done!</span>
+							</div>
+							<div class="cong-details flex-col">
+								<span>
+									🎉 Congratulations on completing the quiz 👏
+								</span>
+								<span class="quiz-name">{Quiz Name}</span>
+								<div class="date">
+									<span>Completion Date: </span>
+									<span>22 May 2024</span>
+									<span>12.34 pm</span>
+								</div>
+							</div>
+						</div>
+						<div class="summary">
+							<span class="summary-title">Summary</span>
+							<div class="summary-wrapper">
+								<div class="summary-details true">
+									<div class="summary-info">
+										<span><i class="bx bx-check"></i></span>
+										<span>9</span>
+									</div>
+									<div class="summary-label">
+										<span>Correct</span>
+									</div>
+								</div>
+								<div class="summary-details false">
+									<div class="summary-info">
+										<span><i class="bx bx-x"></i></span>
+										<span>9</span>
+									</div>
+									<div class="summary-label">
+										<span>Incorrect</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="review">
+						<span class="review-title">Review Answer</span>
+						<div class="review-wrapper">
+							<div class="review-question">
+								<!-- quiz template mcq-->
+
+								<!-- Correct ans：
+									label加 class="correct-ans"
+									div class="choice" 后面加 "correct-ans"-->
+
+								<!-- Incorrect ans：
+									label加 class="incorrect-ans"
+									div class="choice" 后面加 "incorrect-ans"
+									然后input要放checked-->
+
+								<div class="template">
+									<div class="mcq">
+										<div class="question-header">
+											<span class="numbering"
+												>Question 1</span
+											>
+										</div>
+
+										<div class="ques-mcq">
+											<span>
+												In a population of 1,000 cattle
+												tested for Brucella abortus, 5
+												positives are identified using a
+												perfect test. What is the
+												sensitivity of the test being
+												used?
+											</span>
+										</div>
+
+										<div class="ans-mcq">
+											<!-- ans 1 -->
+											<label for="choiceA-q1" class="incorrect-ans">
+												<div class="choice incorrect-ans">
+													<input type="radio" name="choice-q1" id="choiceA-q1" checked disabled />
+													<span>0.5%</span>
+												</div>
+											</label>
+
+											<!-- ans 2 -->
+											<label for="choiceB-q1" class="correct-ans">
+												<div class="choice correct-ans">
+													<input type="radio" name="choice-q1" id="choiceB-q1" disabled />
+													<span>99.5%</span>
+												</div>
+											</label>
+
+											<!-- ans 3 -->
+											<label for="choiceC-q1">
+												<div class="choice">
+													<input type="radio" name="choice-q1" id="choiceC-q1" disabled />
+													<span>100%</span>
+												</div>
+											</label>
+
+											<!-- ans 4 -->
+											<label for="choiceD-q1">
+												<div class="choice">
+													<input type="radio" name="choice-q1" id="choiceD-q1" disabled />
+													<span>Cannot be determined</span>
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<!-- quiz template tof-->
+
+								<!-- Correct ans：
+									label加 class="correct-ans"-->
+
+								<!-- Incorrect ans：
+									label加 class="incorrect-ans"-->
+
+								<div class="template">
+									<div class="tof">
+										<div class="question-header">
+											<span class="numbering"
+												>Question 1</span
+											>
+										</div>
+
+										<div class="ques-tof">
+											<span>
+												A batch of vacuum packaged,
+												sliced saveloy with 10^5
+												(100.000) colony forming units
+												per gram lactobacilli and 10^4
+												(10.000) colony forming units
+												per gram Lancefield group D
+												streptococci
+											</span>
+										</div>
+										<div class="ans-tof">
+											<div class="tof-button">
+												<input
+													type="radio"
+													name="tof-q1"
+													id="true-q1"
+													disabled
+												/>
+												<label
+													for="true-q1"
+													class="label-tof correct-ans"
+												>
+													<span>True</span>
+												</label>
+											</div>
+											<div class="tof-button">
+												<input
+													type="radio"
+													name="tof-q1"
+													id="false-q1"
+													disabled
+												/>
+												<label
+													for="false-q1"
+													class="label-tof incorrect-ans"
+												>
+													<span>False</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- quiz template fitb-->
+								<div class="template">
+									<div class="fitb">
+										<div class="question-header">
+											<span class="numbering"
+												>Question 1</span
+											>
+										</div>
+										<div class="ques-fitb">
+											<!-- spawn the empty span at the ans part -->
+											<span>
+												In "The
+												<span class="empty"></span>
+												King," Simba learns about
+												responsibility and the circle of
+												life.
+												<!-- 5 underscore "_" -->
+											</span>
+										</div>
+
+										<!-- if wrong, show correct ans, add a class to input -->
+
+										<div class="ans-fitb">
+											<input
+												type="text"
+												value="Answer: Tiger"
+												class="incorrect-ans"
+												disabled
+											/>
+											<span>Correct Answer: </span>
+											<span class="correct-ans">
+												Lion
+											</span>
+										</div>
+
+										<!-- if correct, no need show correct ans, just add a class to input -->
+
+										<!-- <div class="ans-fitb">
+											<input
+												type="text"
+												value="Answer: Lion"
+												class="correct-ans"
+												disabled
+											/>
+										</div> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

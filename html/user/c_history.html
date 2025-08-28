@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Customer Details</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_history.css" />
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+		<script src="../../js/expand_collapse.js"></script>
+		<script src="../../js/popup.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Chivo", sans-serif;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			.container {
+				width: 1190px;
+				margin: 0 auto;
+			}
+
+			nav {
+				background-color: #f3f2ff;
+				height: 60px;
+				width: 100%;
+				display: flex;
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				box-shadow: #8389b5 0px 0px 50px;
+				transition: all 1s ease;
+				/* border-bottom: #161a30 1px solid !important; */
+				/* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -2px rgba(0, 0, 0, 0.1); */
+			}
+
+			.no-shadow {
+				box-shadow: none;
+			}
+
+			.nav-flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				cursor: pointer;
+			}
+
+			.logo a {
+				text-decoration: none;
+			}
+
+			.logo span {
+				font-size: 22px;
+				font-weight: bold;
+				color: #33384f;
+				font-family: "Shrikhand", serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.logo .orange {
+				color: #de581b;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main content -->
+		<div class="uni-wrapper">
+			<div class="container flex-row">
+				<div class="content-container flex-row">
+					<!-- history -->
+					<div class="history-wrapper">
+						<div class="history-details">
+							<div class="history-details-header">
+								<span>History Tracker</span>
+							</div>
+							<div class="history-details-body">
+								<div class="search">
+									<div class="search-bar">
+										<span class="search-bar-text"
+											>Search:</span
+										>
+										<input
+											type="text"
+											placeholder="Search ID or title"
+										/>
+										<span class="search-bar-text"
+											>Filter:</span
+										>
+										<select
+											class="cat-filter"
+											name="category"
+											id="category"
+										>
+											<option value="all">
+												All category
+											</option>
+											<option value="practice">
+												Practice Quizzes
+											</option>
+											<option value="ranked">
+												Ranked Quizzes
+											</option>
+										</select>
+										<select
+											class="lvl-filter"
+											name="level"
+											id="level"
+										>
+											<option value="all">
+												All time
+											</option>
+											<option value="days7">
+												Past 7 days
+											</option>
+											<option value="days30">
+												Past 30 days
+											</option>
+											<option value="months3">
+												Past 3 months
+											</option>
+											<option value="months6">
+												Past 6 months
+											</option>
+										</select>
+									</div>
+									<div class="search-result">
+										<span>Total Result(s) : 1</span>
+									</div>
+								</div>
+
+								<div class="timeline">
+									<button class="toggle-button">
+										<i class="bx bx-expand-alt"></i>
+									</button>
+									<span>24 May 2024</span>
+									<div class="date">
+										<div class="result-yes">
+											<div class="result-list">
+												<div
+													class="result-card-coll result-card"
+												>
+													<div
+														class="card-banner-coll card-banner"
+													>
+														<span
+															><i
+																class="bx bx-bookmark-alt"
+															></i
+														></span>
+														<span
+															class="card-type"
+															style="
+																display: none;
+															"
+															>Multiple Choice
+															Question</span
+														>
+													</div>
+													<div
+														class="card-content-coll card-content"
+													>
+														<div
+															class="card-title-coll card-title"
+														>
+															How to Boob sekolah
+															in abu becker way
+															jsdnj dsjkdn
+														</div>
+														<div
+															class="card-category"
+														>
+															Practice Quizzes
+														</div>
+														<div
+															class="card-level"
+															style="
+																display: none;
+															"
+														>
+															31 years old and
+															above
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="timeline">
+									<button class="toggle-button">
+										<i class="bx bx-expand-alt"></i>
+									</button>
+									<span>24 May 2024</span>
+									<div class="date">
+										<div class="result-yes">
+											<div class="result-list">
+												<div
+													class="result-card-coll result-card"
+												>
+													<div
+														class="card-banner-coll card-banner"
+													>
+														<span
+															><i
+																class="bx bx bx-medal"
+															></i
+														></span>
+														<span
+															class="card-type"
+															style="
+																display: none;
+															"
+															>Multiple Choice
+															Question</span
+														>
+													</div>
+													<div
+														class="card-content-coll card-content"
+													>
+														<div
+															class="card-title-coll card-title"
+														>
+															Spongebob
+															Squarepants lives in
+															a pineapple under
+															the sea
+														</div>
+														<div
+															class="card-category"
+														>
+															Ranked Quizzes
+														</div>
+														<div
+															class="card-level"
+															style="
+																display: none;
+															"
+														>
+															31 years old and
+															above
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="end-data">
+									<span>No more records to display...</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- pop-up -->
+
+					<div class="pop-up-overlay" style="display: none">
+						<!-- practices quizzes pop-up-->
+
+						<div class="pop-up" id="practice-quizzes-popup">
+							<div class="close-button">
+								<span class="close-btn">
+									<i class="bx bx-x"></i>
+								</span>
+							</div>
+							<div class="header">
+								<span class="pop-up-type">
+									Practice Quizzes
+								</span>
+								<span class="pop-up-title">
+									How to Boom sekolah with abu becker way How
+									to Boom sekolah with abu becker way How to
+									Boom sekolah with abu becker way How to Boom
+									sekolah with abu becker way2 How to Boom
+									sekolah
+								</span>
+							</div>
+							<div class="details">
+								<span class="pop-up-details">
+									Creation date:
+								</span>
+								<span class="pop-up-ans"
+									>20 May 2024
+									<span class="edited">Last edited: </span>
+									<span class="edited-ans">21 May 2024</span>
+								</span>
+								<span class="pop-up-details"> Type: </span>
+								<span class="pop-up-ans">
+									Multiple Choice Question
+								</span>
+								<span class="pop-up-details"> Level: </span>
+								<span class="pop-up-ans">
+									12 years old and above
+								</span>
+							</div>
+							<div class="action">
+								<a href="#">
+									<button class="pop-up-btn-ex">
+										Review
+									</button>
+								</a>
+								<a href="#">
+									<button class="pop-up-btn">Attempt</button>
+								</a>
+							</div>
+						</div>
+
+						<!-- ranked quizzes pop-up-->
+
+						<div class="pop-up-rank" id="ranked-quizzes-popup">
+							<div class="close-button">
+								<span class="close-btn">
+									<i class="bx bx-x"></i>
+								</span>
+							</div>
+							<div class="pop-up-rank-wrapper">
+								<div class="pop-up-rank-left">
+									<div class="header">
+										<span class="pop-up-type">
+											Ranked Quizzes
+										</span>
+										<span class="pop-up-title">
+											Spongebob Squarepants lives in a
+											pineapple under the sea
+										</span>
+									</div>
+									<div class="details">
+										<span class="pop-up-details">
+											Creation date:
+										</span>
+										<span class="pop-up-ans"
+											>20 May 2024
+											<span class="edited"
+												>Last edited:
+											</span>
+											<span class="edited-ans"
+												>21 May 2024</span
+											>
+										</span>
+										<span class="pop-up-details">
+											Total Participants</span
+										>
+										<span class="pop-up-ans">999</span>
+										<span class="pop-up-details"
+											>Your Rank</span
+										>
+										<span class="pop-up-ans">--</span>
+									</div>
+									<div class="action">
+										<a href="#">
+											<button class="pop-up-btn">
+												Attempt / Review
+											</button>
+										</a>
+									</div>
+								</div>
+								<div class="pop-up-rank-right">
+									<div class="leaderboard">
+										<div class="lead-title">
+											<span>Leaderboard</span>
+										</div>
+										<div class="rank123">
+											<!-- rank 2 -->
+
+											<div class="rank2">
+												<div class="rank-profile">
+													<img
+														src="../img/profile_jacky.jpg"
+														alt=""
+													/>
+												</div>
+												<div class="rank-details">
+													<span class="rank-name"
+														>username</span
+													>
+													<span class="rank-score"
+														>score</span
+													>
+												</div>
+												<div class="stand stand-2">
+													<span>2</span>
+												</div>
+											</div>
+
+											<!-- rank 1 -->
+
+											<div class="rank1">
+												<div class="rank-profile">
+													<img
+														src="../img/profile_chunkeat.jpg"
+														alt=""
+													/>
+												</div>
+												<div class="rank-details">
+													<span class="rank-name"
+														>username</span
+													>
+													<span class="rank-score"
+														>score</span
+													>
+												</div>
+												<div class="stand stand-1">
+													<span>1</span>
+												</div>
+											</div>
+
+											<!-- rank 3 -->
+
+											<div class="rank3">
+												<div class="rank-profile">
+													<img
+														src="../img/profile_munlok.jpg"
+														alt=""
+													/>
+												</div>
+												<div class="rank-details">
+													<span class="rank-name"
+														>username
+													</span>
+													<span class="rank-score"
+														>score</span
+													>
+												</div>
+												<div class="stand stand-3">
+													<span>3</span>
+												</div>
+											</div>
+										</div>
+										<div class="rank-me">
+											<div class="rank-bar">
+												<span class="rank-num"
+													>356</span
+												>
+												<span class="rank-me-name"
+													>You</span
+												>
+												<span class="rank-me-score"
+													>score</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

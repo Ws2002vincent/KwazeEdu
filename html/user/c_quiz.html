@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create Quiz</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_quiz.css" />
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Chivo", sans-serif;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			.container {
+				width: 1190px;
+				margin: 0 auto;
+			}
+
+			nav {
+				background-color: #f3f2ff;
+				height: 60px;
+				width: 100%;
+				display: flex;
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				box-shadow: #8389b5 0px 0px 50px;
+				transition: all 1s ease;
+				/* border-bottom: #161a30 1px solid !important; */
+				/* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -2px rgba(0, 0, 0, 0.1); */
+			}
+
+			.no-shadow {
+				box-shadow: none;
+			}
+
+			.nav-flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				cursor: pointer;
+			}
+
+			.logo a {
+				text-decoration: none;
+			}
+
+			.logo span {
+				font-size: 22px;
+				font-weight: bold;
+				color: #33384f;
+				font-family: "Shrikhand", serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.logo .orange {
+				color: #de581b;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- content -->
+		<div class="uni-wrapper">
+			<div class="container flex-col">
+				<div class="content-container">
+					<!-- directory -->
+					<div class="directory">
+						<a href="">
+							<button><i class="bx bx-arrow-back"></i></button>
+						</a>
+					</div>
+					<div class="timer">
+						<div class="time">
+							<span>Time : 00:00:00</span>
+						</div>
+					</div>
+
+					<!-- title -->
+					<div class="title-box">
+						<div class="title">
+							<span>Quiz Title</span>
+						</div>
+						<div class="title-details">
+							<span>Multiple Choice Question</span>
+							<span class="symbol-directory">,</span>
+							<span>12 years old and above</span>
+						</div>
+						<div class="title-date">
+							<span>Created on 29/3/2024</span>
+							<span class="symbol-directory">,</span>
+							<span>Last updated on 28/5/2024</span>
+						</div>
+					</div>
+
+					<form action="">
+						<div class="quiz-wrapper">
+							<!-- quiz template mcq-->
+							<div class="template">
+								<div class="mcq">
+									<div class="question-header">
+										<span class="numbering"
+											>Question 1</span
+										>
+									</div>
+
+									<div class="ques-mcq">
+										<span>
+											In a population of 1,000 cattle
+											tested for Brucella abortus, 5
+											positives are identified using a
+											perfect test. What is the
+											sensitivity of the test being used?
+										</span>
+									</div>
+
+									<div class="ans-mcq">
+										<!-- ans 1 -->
+										<label for="choiceA-q2">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choice-q2"
+													id="choiceA-q2"
+												/>
+												<span>0.5%</span>
+											</div>
+										</label>
+
+										<!-- ans 2 -->
+										<label for="choiceB-q2">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choice-q2"
+													id="choiceB-q2"
+												/>
+												<span>99.5%</span>
+											</div>
+										</label>
+
+										<!-- ans 3 --><label for="choiceC-q2">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choice-q2"
+													id="choiceC-q2"
+												/>
+												<span>100%</span>
+											</div>
+										</label>
+
+										<!-- ans 4 -->
+										<label for="choiceD-q2">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choice-q2"
+													id="choiceD-q2"
+												/>
+												<span
+													>Cannot be determined</span
+												>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="template">
+								<div class="mcq">
+									<div class="question-header">
+										<span class="numbering"
+											>Question 1</span
+										>
+									</div>
+
+									<div class="ques-mcq">
+										<span>
+											In a population of 1,000 cattle
+											tested for Brucella abortus, 5
+											positives are identified using a
+											perfect test. What is the
+											sensitivity of the test being used?
+										</span>
+									</div>
+
+									<div class="ans-mcq">
+										<!-- ans 1 -->
+										<label for="choiceA-q3">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choic-q3"
+													id="choiceA-q3"
+												/>
+												<span>0.5%</span>
+											</div>
+										</label>
+
+										<!-- ans 2 -->
+										<label for="choiceB-q3">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choic-q3"
+													id="choiceB-q3"
+												/>
+												<span>99.5%</span>
+											</div>
+										</label>
+
+										<!-- ans 3 --><label for="choiceC-q3">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choic-q3"
+													id="choiceC-q3"
+												/>
+												<span>100%</span>
+											</div>
+										</label>
+
+										<!-- ans 4 -->
+										<label for="choiceD-q3">
+											<div class="choice">
+												<input
+													type="radio"
+													name="choic-q3"
+													id="choiceD-q3"
+												/>
+												<span
+													>Cannot be determined</span
+												>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<!-- quiz template tof-->
+							<div class="template">
+								<div class="tof">
+									<div class="question-header">
+										<span class="numbering"
+											>Question 1</span
+										>
+									</div>
+
+									<div class="ques-tof">
+										<span>
+											A batch of vacuum packaged, sliced
+											saveloy with 10^5 (100.000) colony
+											forming units per gram lactobacilli
+											and 10^4 (10.000) colony forming
+											units per gram Lancefield group D
+											streptococci
+										</span>
+									</div>
+									<div class="ans-tof">
+										<div class="tof-button">
+											<input
+												type="radio"
+												name="tof-q1"
+												id="true-q1"
+											/>
+											<label
+												for="true-q1"
+												class="label-tof"
+											>
+												<span>True</span>
+											</label>
+										</div>
+										<div class="tof-button">
+											<input
+												type="radio"
+												name="tof-q1"
+												id="false-q1"
+											/>
+											<label
+												for="false-q1"
+												class="label-tof"
+											>
+												<span>False</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- quiz template fitb-->
+							<div class="template">
+								<div class="fitb">
+									<div class="question-header">
+										<span class="numbering"
+											>Question 1</span
+										>
+									</div>
+									<div class="ques-fitb">
+										<span>
+											In "The
+											<span class="empty"></span>
+											King," Simba learns about
+											responsibility and the circle of
+											life.
+										</span>
+									</div>
+									<div class="ans-fitb">
+										<input
+											type="text"
+											placeholder="Type your answer here..."
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- save button -->
+						<div class="btn-container">
+							<input type="submit" value="Submit" />
+						</div>
+						<div class="title-date">
+							<span>
+								Make sure all is done before submitting. Good
+								Luck!
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

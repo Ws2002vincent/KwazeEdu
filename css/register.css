@@ -1,0 +1,215 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Chivo", sans-serif;
+}
+
+body {
+	background-color: #1c253b;
+	background-image: url(../img/background.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+.card {
+	max-width: 450px;
+	margin: 65px auto 0px;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 0 60px #111a26;
+	background-color: #f3f2ff;
+}
+
+.card-header {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.card-header h1 {
+	width: 230px;
+	margin: auto;
+	font-size: 28px;
+	color: #333;
+	border-bottom: 1.5px solid #33384f;
+	padding-bottom: 8px;
+}
+
+.card-header span {
+	font-size: 14px;
+	line-height: 30px;
+	color: #333;
+}
+
+.card-header span a {
+	padding-left: 5px;
+	color: #343950;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.card-header span a:hover {
+	color: #de581b;
+	text-decoration: underline;
+}
+
+.card-body {
+	margin-top: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form-control,
+.form-control-name {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+.form-control i,
+.form-control-name i {
+	font-size: 18px;
+	margin: auto 0;
+	margin-right: 9px;
+}
+
+.form-control .bx-hide,
+.form-control .bx-show {
+	position: absolute;
+	top: 9px;
+	right: 5px;
+	cursor: pointer;
+}
+
+.form-control .bx-show {
+	color: #de581b;
+}
+
+.form-control-name input {
+	width: 130px;
+	padding: 10px;
+	padding-left: 15px;
+	border: 1px solid #33384f;
+	border-radius: 20px;
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+.form-control-name input:last-child {
+	margin-right: 0px;
+}
+
+.form-control input {
+	width: 270px;
+	padding: 10px;
+	padding-left: 15px;
+	border: 1px solid #33384f;
+	border-radius: 20px;
+	font-size: 12px;
+}
+
+.form-control select {
+	width: 270px;
+	padding: 10px;
+	padding-left: 15px;
+	border: 1px solid #33384f;
+	border-radius: 20px;
+	font-size: 12px;
+}
+
+.form-control select option {
+	padding: 10px;
+}
+
+.error {
+	margin: 0 auto;
+	color: red;
+	font-size: 12px;
+	margin: 2px 0 8px 90px;
+	display: flex;
+	visibility: visible;
+}
+
+.error i {
+	line-height: 13px;
+	margin-right: 5px;
+}
+
+.erroricon {
+	visibility: hidden;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	margin: 50px auto;
+	margin-bottom: 0px;
+	width: 300px;
+}
+
+.reset input {
+	width: 90px;
+	margin-right: 10px;
+	padding: 10px;
+	border: 1px solid #33384f;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 15px;
+	background-color: #f3f2ff;
+	color: #1c253b;
+	font-weight: 500px;
+}
+
+.reset input:hover {
+	background-color: #ddddfc;
+}
+
+.submit input {
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #33384f;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 15px;
+	background-color: #1c253b;
+	color: #f3f2ff;
+	font-weight: 500px;
+}
+
+.submit input:hover {
+	background-color: #343950;
+}
+
+.ex-text {
+	text-align: center;
+	margin-top: 20px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.ex-text span {
+	font-size: 12px;
+	color: #333;
+}
+
+.ex-text span a {
+	color: #1c253b;
+	text-decoration: underline;
+}
+
+.ex-text span a:hover {
+	color: #de581b;
+	text-decoration: underline;
+}

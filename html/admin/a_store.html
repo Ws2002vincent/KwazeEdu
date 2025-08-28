@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learning Material</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_store.css" />
+
+		<!-- JS -->
+		<script src="../../js/popup.js"></script>
+		<script src="../../js/store_img_preview.js"></script>
+	</head>
+
+	<body>
+		<!-- Navigation bar -->
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+				<ul class="nav-list">
+					<li class="list">
+						Learning Corner<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown">
+							<li><a href="#">Learning Material</a></li>
+							<li><a href="#">Practice Quizzes</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						Gamified<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown">
+							<li><a href="#">Ranked Quizzes</a></li>
+							<li><a href="#">Gamified Store</a></li>
+						</ul>
+					</li>
+					<li class="list">History</li>
+					<li class="list">
+						Profile<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown-last">
+							<li><a href="#">View Profile</a></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- content -->
+		<div class="uni-wrapper">
+			<div class="container flex-row space-b">
+				<div class=".content-container-store">
+					<div class="title-row">
+						<span
+							><i class="bx bxs-invader"></i>Gamified Store</span
+						>
+						<button class="create-btn pop-up-add-admin">
+							Add New Profile
+						</button>
+					</div>
+					<div class="search">
+						<div class="search-bar">
+							<!-- search name -->
+							<span class="search-bar-text">Search:</span>
+							<input
+								type="text"
+								placeholder="Search ID or Username"
+							/>
+						</div>
+
+						<!-- how many result -->
+						<div class="search-result">
+							<span>Total Result : 1</span>
+						</div>
+					</div>
+					<div class="table-data">
+						<table>
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Description Name</th>
+									<th>Series</th>
+									<th>Coin Needed</th>
+									<th>Creation Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- data here -->
+
+								<tr
+									data-id="1"
+									data-name="Sleeping"
+									data-series="Capybara"
+									data-coins="13"
+									data-date="28/5/2024"
+								>
+									<td>1</td>
+									<td>Sleeping</td>
+									<td>Capybara</td>
+									<td>13</td>
+									<td>28/5/2024</td>
+								</tr>
+								<tr
+									data-id="2"
+									data-name="hehe"
+									data-series="Capybara"
+									data-coins="13"
+									data-date="28/5/2024"
+								>
+									<td>2</td>
+									<td>hehe</td>
+									<td>Capybara</td>
+									<td>13</td>
+									<td>28/5/2024</td>
+								</tr>
+
+								<!-- data end -->
+							</tbody>
+
+							<script>
+								document.addEventListener(
+									"DOMContentLoaded",
+									function () {
+										const rows = document.querySelectorAll(
+											".table-data tbody tr"
+										);
+
+										rows.forEach((row) => {
+											row.addEventListener(
+												"click",
+												function () {
+													// Remove selected class from all rows
+													rows.forEach((r) =>
+														r.classList.remove(
+															"selected-row"
+														)
+													);
+
+													// Add selected class to the clicked row
+													row.classList.add(
+														"selected-row"
+													);
+
+													// Call the function to update the profile details
+													updateProfileDetails(row);
+												}
+											);
+										});
+
+										function updateProfileDetails(row) {
+											const name =
+												row.getAttribute("data-name");
+											const series =
+												row.getAttribute("data-series");
+											const coins =
+												row.getAttribute("data-coins");
+
+											// Assuming you have these elements in your profile details
+											document.querySelector(
+												'.profile-details .render_data[data-type="name"] .data'
+											).textContent = name;
+											document.querySelector(
+												'.profile-details .render_data[data-type="series"] .data'
+											).textContent = series;
+											document.querySelector(
+												'.profile-details .render_data[data-type="coins"] .data'
+											).textContent = coins;
+										}
+									}
+								);
+							</script>
+						</table>
+						<div class="end-data">
+							<span>No more records to display...</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="profile-details">
+					<div class="profile-holder"></div>
+					<form action="">
+						<div class="profile-details-data">
+							<div class="render_data" data-type="series">
+								<span class="label">Series</span>
+								<span class="data-fixed">abubeckkker</span>
+							</div>
+
+							<div class="render_data" data-type="name">
+								<span class="label">Description Name</span>
+
+								<!-- 如果是span的话，他的class是，data-fixed。如果是input，class是data -->
+								<!-- <span class="data-fixed">abubeckkker</span> -->
+								<input
+									type="text"
+									class="data"
+									value="Sleeping"
+								/>
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email.</span>
+								</div>
+							</div>
+							<div class="render_data" data-type="coin">
+								<span class="label">Coin Needed</span>
+								<!-- <span class="data-fixed">13</span> -->
+								<input type="text" class="data" value="13" />
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email.</span>
+								</div>
+							</div>
+							<div class="btn-container-store">
+								<!-- <div class="btn-edit-store">Edit</div> -->
+								<input
+									type="submit"
+									class="btn-edit-store"
+									value="Save"
+									disabled
+								/>
+								<div class="btn-dlt-store">Delete</div>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<!-- popup -->
+
+				<div
+					class="pop-up-overlay"
+					style="display: none"
+					id="adminPopup"
+				>
+					<div class="pop-up-admin pop-up-add-admin">
+						<div class="close-button">
+							<span class="close-btn">
+								<i class="bx bx-x"></i>
+							</span>
+						</div>
+
+						<div class="header">
+							<span class="pop-up-title">
+								Add New Gamified Profile
+							</span>
+						</div>
+
+						<div class="details">
+							<form action="" method="post">
+								<div class="form-col">
+									<div class="render_data-upload">
+										<input type="file" id="file" />
+										<label for="file">
+											<span class="upload-text">
+												Upload Image
+											</span>
+											<!-- Image preview -->
+											<div
+												class="image-preview"
+												id="imagePreview"
+											>
+												<img
+													src=""
+													alt="Image Preview"
+													class="image-preview__image"
+													style="display: none"
+												/>
+												<div class="blur-layer"></div>
+											</div>
+										</label>
+										<div class="error">
+											<i class="bx bx-error-circle"></i>
+											<span>Username or email.</span>
+										</div>
+									</div>
+									<div class="render_data">
+										<span class="label"
+											>Description Name</span
+										>
+										<input
+											type="text"
+											class="data"
+											placeholder="Name"
+										/>
+										<div class="error">
+											<i class="bx bx-error-circle"></i>
+											<span>Username or email.</span>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="render_data-row">
+											<span class="label">Series</span>
+											<!-- <input
+												type="text"
+												class="data"
+												placeholder="Series"
+											/> -->
+											<input list="all-series" id="series" class="data" name="series">
+											<datalist id="all-series">
+												<option value="Capybara">
+												<option value="Human">
+												<option value="Spiderman">
+												<option value="Abu Becckerr">
+												<option value="Daniel Mc Donald">
+											</datalist>
+											<div class="error">
+												<i
+													class="bx bx-error-circle"
+												></i>
+												<span>Username or email.</span>
+											</div>
+										</div>
+										<div class="render_data-row">
+											<span class="label"
+												>Coin Needed</span
+											>
+											<!-- <span class="data-fixed">13</span> -->
+											<input
+												type="text"
+												class="data"
+												placeholder="Coin needed"
+											/>
+											<div class="error">
+												<i
+													class="bx bx-error-circle"
+												></i>
+												<span>Username or email.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="btn-container-add">
+									<input
+										type="reset"
+										class="btn-clear-store"
+										value="Clear"
+									/>
+									<input
+										type="submit"
+										class="btn-edit-store"
+										value="Create"
+									/>
+								</div>
+							</form>
+
+							<script>
+								document
+									.getElementById("file")
+									.addEventListener("change", function () {
+										const file = this.files[0];
+										if (file) {
+											const reader = new FileReader();
+											const previewContainer =
+												document.getElementById(
+													"imagePreview"
+												);
+											const previewImage =
+												previewContainer.querySelector(
+													".image-preview__image"
+												);
+											const previewDefaultText =
+												previewContainer.querySelector(
+													".image-preview__default-text"
+												);
+
+											reader.addEventListener(
+												"load",
+												function () {
+													previewImage.setAttribute(
+														"src",
+														this.result
+													);
+													previewImage.style.display =
+														"block";
+													previewDefaultText.style.display =
+														"none";
+												}
+											);
+
+											reader.readAsDataURL(file);
+										} else {
+											const previewContainer =
+												document.getElementById(
+													"imagePreview"
+												);
+											const previewImage =
+												previewContainer.querySelector(
+													".image-preview__image"
+												);
+											const previewDefaultText =
+												previewContainer.querySelector(
+													".image-preview__default-text"
+												);
+
+											previewImage.style.display = "none";
+											previewDefaultText.style.display =
+												null;
+										}
+									});
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

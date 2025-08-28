@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create Quiz</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/a_add.css" />
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+		<script src="../../js/add_mcq_correct.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Chivo", sans-serif;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			.container {
+				width: 1190px;
+				margin: 0 auto;
+			}
+
+			nav {
+				background-color: #f3f2ff;
+				height: 60px;
+				width: 100%;
+				display: flex;
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				box-shadow: #8389b5 0px 0px 50px;
+				transition: all 1s ease;
+				/* border-bottom: #161a30 1px solid !important; */
+				/* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -2px rgba(0, 0, 0, 0.1); */
+			}
+
+			.no-shadow {
+				box-shadow: none;
+			}
+
+			.nav-flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				cursor: pointer;
+			}
+
+			.logo a {
+				text-decoration: none;
+			}
+
+			.logo span {
+				font-size: 22px;
+				font-weight: bold;
+				color: #33384f;
+				font-family: "Shrikhand", serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.logo .orange {
+				color: #de581b;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- content -->
+		<div class="uni-wrapper">
+			<div class="container flex-col">
+				<div class="content-container">
+					<!-- directory -->
+					<div class="directory">
+						<a href="#">Dashboard</a>
+						<span class="symbol-directory">></span>
+						<a href="#">Manage Learning Material</a>
+						<span class="symbol-directory">></span>
+						<span class="no-bold-directory"
+							>Create Learning Material</span
+						>
+						<span class="symbol-directory">></span>
+						<a href="#">-- mat name --</a>
+					</div>
+
+					<!-- title -->
+					<div class="title-box">
+						<div class="title">
+							<span>Material Title</span>
+						</div>
+						<div class="title-details">
+							<span>Storyboard Reading</span>
+							<span class="symbol-directory">,</span>
+							<span>12 years old and above</span>
+						</div>
+					</div>
+
+					<form action="">
+						<!-- tools -->
+						<div class="tools">
+							<div class="tool">
+								<button
+									class="add"
+									aria-label="Add a new template"
+								>
+									<i class="bx bx-plus"></i>
+									<span class="tooltip-text">
+										Add a new template
+									</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- mat template story-->
+						<div class="template">
+							<div class="story">
+								<div class="question-header">
+									<span class="numbering">Story 1</span>
+									<button>
+										<i class="bx bx-trash"></i>
+									</button>
+								</div>
+								<div class="instruction">
+									<span>
+										Upload a picture and start to write an
+										interesting story!
+									</span>
+								</div>
+								<div class="mat-story">
+									<input type="file" id="file-story" />
+									<label for="file-story">Upload Image</label>
+									<div class="ques-error-mcq">
+										<i class="bx bx-error-circle"></i>
+										<span>Email is required.</span>
+									</div>
+									<textarea
+										name=""
+										id=""
+										placeholder="Type your story here..."
+									></textarea>
+									<div class="ques-error-mcq">
+										<i class="bx bx-error-circle"></i>
+										<span>Email is required.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- mat template paragraph-->
+						<div class="template">
+							<div class="paragraph">
+								<div class="question-header">
+									<span class="numbering">Paragraph 1</span>
+									<button>
+										<i class="bx bx-trash"></i>
+									</button>
+								</div>
+								<div class="instruction">
+									<span> Make it in a paragraph! </span>
+								</div>
+								<div class="mat-parag">
+									<textarea
+										name=""
+										id=""
+										placeholder="Type your paragraph here..."
+									></textarea>
+									<div class="ques-error-mcq">
+										<i class="bx bx-error-circle"></i>
+										<span>Email is required.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- mat template sfc-->
+						<div class="template">
+							<div class="sfc">
+								<div class="question-header">
+									<span class="numbering"
+										>Simple Fash Card 1</span
+									>
+									<button>
+										<i class="bx bx-trash"></i>
+									</button>
+								</div>
+								<div class="instruction">
+									<span>
+										Upload a picture and tell us what is it!
+									</span>
+								</div>
+								<div class="mat-sfc">
+									<div class="image-upload flex-col">
+										<input type="file" id="file-sfc" />
+										<label for="file-sfc"
+											>Upload Image</label
+										>
+										<div class="ques-error-mcq">
+											<i class="bx bx-error-circle"></i>
+											<span>Email is required.</span>
+										</div>
+									</div>
+									<div class="textbox-field flex-col">
+										<input
+											type="text"
+											placeholder="What is this?"
+										/>
+										<div class="ques-error-mcq">
+											<i class="bx bx-error-circle"></i>
+											<span>Email is required.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- mat template afc-->
+						<div class="template">
+							<div class="afc">
+								<div class="question-header">
+									<span class="numbering"
+										>Advanced Fash Card 1</span
+									>
+									<button>
+										<i class="bx bx-trash"></i>
+									</button>
+								</div>
+								<div class="instruction">
+									<span>
+										Upload a picture and tell us what is it!
+									</span>
+								</div>
+								<div class="mat-afc">
+									<div class="image-upload flex-col">
+										<input type="file" id="file-afc" />
+										<label for="file-afc"
+											>Upload Image</label
+										>
+										<div class="ques-error-mcq">
+											<i class="bx bx-error-circle"></i>
+											<span>Email is required.</span>
+										</div>
+									</div>
+									<div class="textbox-field flex-col">
+										<input
+											type="text"
+											placeholder="What is this?"
+										/>
+										<div class="ques-error-mcq">
+											<i class="bx bx-error-circle"></i>
+											<span>Email is required.</span>
+										</div>
+										<textarea
+											name=""
+											id=""
+											placeholder="Description here..."
+										></textarea>
+										<div class="ques-error-mcq">
+											<i class="bx bx-error-circle"></i>
+											<span>Email is required.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- save button -->
+						<div class="btn-container">
+							<input type="submit" value="Save Changes" />
+						</div>
+					</form>
+					<div class="title-date">
+						<span>Created on 29/3/2024</span>
+						<span class="symbol-directory">,</span>
+						<span>Last updated on 28/5/2024</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learning Material</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/a_view.css" />
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+		<script src="../../js/popup.js"></script>
+	</head>
+
+	<body>
+		<!-- content -->
+		<div class="uni-wrapper">
+			<div class="container flex-col">
+				<div class="content-container">
+					<div class="title-row">
+						<span
+							><i class="bx bxs-user-detail"></i>User
+							Information</span
+						>
+						<button class="create-btn">Add Admin</button>
+					</div>
+					<div class="search">
+						<div class="search-bar">
+							<!-- search name -->
+							<span class="search-bar-text">Search:</span>
+							<input
+								type="text"
+								placeholder="Search ID or Username"
+							/>
+						</div>
+
+						<!-- how many result -->
+						<div class="search-result">
+							<span>Total Result : 1</span>
+						</div>
+					</div>
+					<div class="table-data">
+						<table>
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Username</th>
+									<th>First Name</th>
+									<th>Last Name</th>
+									<th>Email</th>
+									<th>Password</th>
+									<th>Country</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- data here -->
+
+								<tr>
+									<td>1</td>
+									<td>alibubuuuu</td>
+									<td>Ali</td>
+									<td>Bundek</td>
+									<td>libun@gmail.com</td>
+									<td>9090bun</td>
+									<td>Malaysia</td>
+									<td>
+										<button class="view-btn">
+											<i class="bx bxs-show"></i>
+										</button>
+										<button class="dlt-btn">
+											<i class="bx bxs-trash"></i>
+										</button>
+									</td>
+								</tr>
+
+								<!-- data end -->
+							</tbody>
+						</table>
+						<div class="end-data">
+							<span>No more records to display...</span>
+						</div>
+					</div>
+
+					<!-- Popup -->
+
+					<div class="pop-up-overlay" style="display: none">
+						<div class="pop-up pop-up-add-admin">
+							<div class="close-button">
+								<span class="close-btn">
+									<i class="bx bx-x"></i>
+								</span>
+							</div>
+
+							<div class="header">
+								<span class="pop-up-title"> Add Admin </span>
+							</div>
+
+							<div class="details">
+								<form action="">
+									<div class="form-col">
+										<div class="form-row">
+											<div class="form-grp marr">
+												<!-- first name -->
+												<label for="name"
+													>First Name</label
+												>
+												<input
+													type="text"
+													name="name"
+													id="name"
+													placeholder="First Name"
+													class="input-type"
+												/>
+												<div class="error">
+													<i
+														class="bx bx-error-circle"
+													>
+													</i>
+													<span>
+														Username or email is
+														required.
+													</span>
+												</div>
+											</div>
+
+											<div class="form-grp">
+												<!-- last name -->
+												<label for="name"
+													>Last Name</label
+												>
+												<input
+													type="text"
+													name="name"
+													id="name"
+													placeholder="Last Name"
+													class="input-title"
+												/>
+												<div class="error">
+													<i
+														class="bx bx-error-circle"
+													>
+													</i>
+													<span>
+														Password is required.
+													</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- username -->
+										<div class="form-grp">
+											<label for="username"
+												>Username</label
+											>
+											<input
+												type="text"
+												name="txtUsername"
+												id="username"
+												placeholder="Create an Username"
+											/>
+											<div class="error">
+												<i class="bx bx-error-circle">
+												</i>
+												<span>
+													Password is required.
+												</span>
+											</div>
+										</div>
+
+										<!-- email -->
+										<div class="form-grp">
+											<label for="email">Email</label>
+											<input
+												type="text"
+												name="email"
+												id="email"
+												placeholder="Email"
+											/>
+											<div class="error">
+												<i class="bx bx-error-circle">
+												</i>
+												<span>
+													Password is required.
+												</span>
+											</div>
+										</div>
+
+										<!-- password -->
+										<div class="form-grp">
+											<label for="pass">Password</label>
+											<input
+												type="text"
+												name="pass"
+												id="pass"
+												placeholder="Password"
+											/>
+											<div class="error">
+												<i class="bx bx-error-circle">
+												</i>
+												<span>
+													Password is required.
+												</span>
+											</div>
+										</div>
+									</div>
+									<input
+										type="submit"
+										value="Create"
+										class="submit"
+									/>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- view Customer Card Popup -->
+
+					<!-- <div class="pop-up-overlay" style="display: none">
+						<div class="pop-up-view">
+							<div class="close-button">
+								<span class="close-btn">
+									<i class="bx bx-x"></i>
+								</span>
+							</div>
+
+							<div class="profile-header">
+								<div class="top-section">
+									<div class="profile-header-left">
+										<img
+											src="../../img/profile_chunkeat.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="profile-header-right">
+										<span class="profile-name"
+											>Abu Becker</span
+										>
+										<span class="profile-username"
+											>@abubeckkker</span
+										>
+									</div>
+								</div>
+							</div>
+
+							<div class="profile-details">
+								<div class="bottom-section">
+									<div class="label-con">
+										<span class="label">Email: </span>
+										<span class="label">Country: </span>
+									</div>
+									<div class="data-con">
+										<span class="data">
+											AbuAbu@gmail.com
+										</span>
+										<span class="data">Malaysia</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

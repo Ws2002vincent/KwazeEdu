@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learning Material</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_view.css" />
+
+		<!-- JS -->
+		<script src="../../js/filter.js"></script>
+		<script src="../../js/filter_sidebar.js"></script>
+		<script src="../../js/popup.js"></script>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+				<ul class="nav-list">
+					<li class="list">
+						Learning Corner<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown">
+							<li><a href="#">Learning Material</a></li>
+							<li><a href="#">Practice Quizzes</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						Gamified<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown">
+							<li><a href="#">Ranked Quizzes</a></li>
+							<li><a href="#">Gamified Store</a></li>
+						</ul>
+					</li>
+					<li class="list">History</li>
+					<li class="list">
+						Profile<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown-last">
+							<li><a href="#">View Profile</a></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- <div class="banner">
+			<div class="container flex-center">
+				<div class="advertiment">
+					<span class="ad-desc">New feature Introduced</span>
+					<span class="ad-title">
+						<i class="bx bx-game"></i>Gamified Store</span
+					>
+					<button class="ad-btn">Enter</button>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- sidebar -->
+
+		<div class="sidebar-filter">
+			<div class="container flex-row">
+				<div class="content-container">
+					<div class="main-content">
+						<div class="explore-title">
+							<span>
+								<i class="bx bx-trophy"></i>
+								Ranked Quizzes
+							</span>
+						</div>
+						<div class="filter">
+							<ul class="filter-list">
+								<li></li>
+								<li>
+									<button class="filter-item active">
+										Most Popular
+									</button>
+								</li>
+								<li>
+									<button class="filter-item">Latest</button>
+								</li>
+							</ul>
+						</div>
+
+						<!-- if got result -->
+
+						<div class="result-yes">
+							<div class="result-list">
+								<div class="result-card">
+									<div class="card-banner">
+										<span>
+											<i class="bx bx-medal"></i>
+										</span>
+										<span class="card-type">Ranking</span>
+									</div>
+									<div class="card-content">
+										<div class="card-title">
+											Spongebob Squarepants lives in a
+											pineapple under the sea
+										</div>
+										<div class="card-category">
+											Ranked Quizzes
+										</div>
+										<div class="card-level">
+											Your Rank : 1
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- if no result -->
+
+						<!-- <div class="result-no">
+						<div class="result-list-no">
+							<span><i class="bx bxs-binoculars"></i></span>
+							<span>Oops, nothing here yet...</span>
+							<span>Try and look for another.</span>
+						</div> -->
+					</div>
+
+					<!-- pop-up -->
+
+					<div class="pop-up-overlay" style="display: none">
+						<div class="pop-up-rank">
+							<div class="close-button">
+								<span class="close-btn">
+									<i class="bx bx-x"></i>
+								</span>
+							</div>
+							<div class="pop-up-rank-wrapper">
+								<div class="pop-up-rank-left">
+									<div class="header">
+										<span class="pop-up-type">
+											Ranked Quizzes
+										</span>
+										<span class="pop-up-title">
+											Spongebob Squarepants lives in a
+											pineapple under the sea
+										</span>
+									</div>
+									<div class="details">
+										<span class="pop-up-details">
+											Creation date:
+										</span>
+										<span class="pop-up-ans">20 May 2024
+											<span class="edited"
+												>Last edited:
+											</span>
+											<span class="edited-ans"
+												>21 May 2024</span
+											>
+										</span>
+										<span class="pop-up-details">
+											Total Participants</span
+										>
+										<span class="pop-up-ans">999</span>
+										<span class="pop-up-details"
+											>Your Rank</span
+										>
+										<span class="pop-up-ans">--</span>
+									</div>
+									<div class="action">
+										<a href="#">
+											<button class="pop-up-btn-ex">
+												Review
+											</button>
+										</a>
+										<a href="#">
+											<button class="pop-up-btn">
+												Attempt
+											</button>
+										</a>
+									</div>
+								</div>
+								<div class="pop-up-rank-right">
+									<div class="leaderboard">
+										<div class="lead-title">
+											<span>Leaderboard</span>
+										</div>
+										<div class="rank123">
+											<!-- rank 2 -->
+
+											<div class="rank2">
+												<div class="rank-profile">
+													<img
+														src="../../img/profile_jacky.jpg"
+														alt=""
+													/>
+												</div>
+												<div class="rank-details">
+													<span class="rank-name"
+														>username</span
+													>
+													<span class="rank-score"
+														>score</span
+													>
+												</div>
+												<div class="stand stand-2">
+													<span>2</span>
+												</div>
+											</div>
+
+											<!-- rank 1 -->
+
+											<div class="rank1">
+												<div class="rank-profile">
+													<img
+														src="../../img/profile_chunkeat.jpg"
+														alt=""
+													/>
+												</div>
+												<div class="rank-details">
+													<span class="rank-name"
+														>username</span
+													>
+													<span class="rank-score"
+														>score</span
+													>
+												</div>
+												<div class="stand stand-1">
+													<span>1</span>
+												</div>
+											</div>
+
+											<!-- rank 3 -->
+
+											<div class="rank3">
+												<div class="rank-profile">
+													<img
+														src="../../img/profile_munlok.jpg"
+														alt=""
+													/>
+												</div>
+												<div class="rank-details">
+													<span class="rank-name"
+														>username
+													</span>
+													<span class="rank-score"
+														>score</span
+													>
+												</div>
+												<div class="stand stand-3">
+													<span>3</span>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="rank-other">
+											<div class="rank-bar">
+												<span>04</span>
+												<span>username</span>
+												<span>score</span>
+											</div>
+										</div> -->
+										<div class="rank-me">
+											<div class="rank-bar">
+												<span class="rank-num"
+													>356</span
+												>
+												<span class="rank-me-name"
+													>You</span
+												>
+												<span class="rank-me-score"
+													>score</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

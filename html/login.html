@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login 2</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/login.css" />
+
+		<!-- JS -->
+		<script src="../js/show_hide_password.js"></script>
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				<h1>Welcome!</h1>
+				<span>Please login to your account.</span>
+			</div>
+			<div class="card-body">
+				<form action="" method="get">
+					<!-- email or username -->
+					<div class="form-control">
+						<i class="bx bx-envelope"></i>
+						<input
+							type="text"
+							name="txtUser"
+							id="user"
+							placeholder="Username or Email"
+							required
+						/>
+					</div>
+					<div class="error">
+						<i class="bx bx-error-circle"></i>
+						<span>Username or email is required.</span>
+					</div>
+
+					<!-- password -->
+					<div class="form-control">
+						<i class="bx bx-lock-alt"></i>
+						<input
+							type="password"
+							name="txtPassword"
+							id="password"
+							minlength="8"
+							placeholder="Password"
+							required
+						/>
+						<i
+							class="bx bx-hide"
+							id="pass-icon1"
+							onclick="pass('password', 'pass-icon1')"
+						></i>
+					</div>
+					<div class="error">
+						<i class="bx bx-error-circle"></i>
+						<span>Password is required.</span>
+					</div>
+
+					<!-- forgot password -->
+					<span class="forgot">
+						<a href="../html/forgot_forgotPass.html">
+							Forgot Password?
+						</a>
+					</span>
+
+					<!-- submit button -->
+					<div class="submit">
+						<input type="submit" value="Sign In" />
+						<span>
+							Don't have an account?
+							<!-- remember change to .php -->
+							<a href="../html/register.html">Sign Up Now</a>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

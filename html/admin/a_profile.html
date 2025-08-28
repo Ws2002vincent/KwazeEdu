@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile</title>
+
+		<!-- Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icon -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/c_profile.css" />
+
+		<!-- JS -->
+		<script src="../../js/scroll_navbar.js"></script>
+		<script src="../../js/filter_sidebar.js"></script>
+		<script src="../../js/popup.js"></script>
+		<script src="../../js/show_hide_password.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Chivo", sans-serif;
+			}
+
+			.container {
+				width: 1190px;
+				margin: 0 auto;
+			}
+
+			nav {
+				background-color: #f3f2ff;
+				height: 60px;
+				display: flex;
+				position: sticky;
+				top: 0;
+				z-index: 1000;
+				box-shadow: #8389b5 0px 0px 50px;
+				transition: all 1.5s ease;
+			}
+
+			.no-shadow {
+				box-shadow: none;
+			}
+
+			.nav-flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo a {
+				text-decoration: none;
+			}
+
+			.logo span {
+				font-size: 22px;
+				font-weight: bold;
+				color: #33384f;
+				font-family: "Shrikhand", serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.logo .orange {
+				color: #e97b49;
+			}
+
+			.nav-list {
+				display: flex;
+				position: relative;
+			}
+
+			.nav-list .list {
+				height: 60px;
+				line-height: 60px;
+				list-style: none;
+				margin-right: 20px;
+				font-weight: bold;
+				color: #33384f;
+				transition: ease 0.1s;
+				cursor: pointer;
+				font-size: 14px;
+			}
+
+			.nav-list .list:last-child {
+				margin-right: 0;
+			}
+
+			.nav-list .list > i {
+				position: relative;
+				top: 2px;
+			}
+
+			.nav-list .list:hover {
+				color: #de581b;
+			}
+
+			.nav-list .list:hover .dropdown,
+			.nav-list .list:hover .dropdown-last {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			.dropdown {
+				position: absolute;
+				width: 180px;
+				box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+				margin-top: 5px;
+				visibility: hidden;
+				opacity: 0;
+				transition: linear 0.1s;
+				background-color: #f3f2ff;
+				font-size: 12px;
+			}
+
+			.dropdown-last {
+				right: 0;
+				position: absolute;
+				width: 180px;
+				box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+				margin-top: 5px;
+				visibility: hidden;
+				opacity: 0;
+				transition: linear 0.1s;
+				background-color: #f3f2ff;
+				font-size: 12px;
+			}
+
+			.dropdown a,
+			.dropdown-last a {
+				text-decoration: none;
+				color: #33384f;
+				font-weight: 600;
+				transition: ease 0.1s;
+			}
+
+			.dropdown a li,
+			.dropdown-last a li {
+				height: 40px;
+				line-height: 40px;
+				padding-left: 10px;
+				list-style: none;
+			}
+
+			.dropdown li:hover,
+			.dropdown-last li:hover {
+				background-color: #ddddfc;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<nav class="no-shadow">
+			<div class="container nav-flex">
+				<div class="logo">
+					<a href="#">
+						<span>Kwaze</span>
+						<span class="orange">Edu</span>
+						<span class="dot">.</span>
+					</a>
+				</div>
+				<ul class="nav-list">
+					<li class="list">
+						Learning Corner<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown">
+							<li><a href="#">Learning Material</a></li>
+							<li><a href="#">Practice Quizzes</a></li>
+						</ul>
+					</li>
+					<li class="list">
+						Gamified<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown">
+							<li><a href="#">Ranked Quizzes</a></li>
+							<li><a href="#">Gamified Store</a></li>
+						</ul>
+					</li>
+					<li class="list">History</li>
+					<li class="list">
+						Profile<i class="bx bx-chevron-down"></i>
+						<ul class="dropdown-last">
+							<li><a href="#">View Profile</a></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Profile -->
+
+		<div class="profile-wrapper">
+			<div class="container flex-col">
+				<div class="profile-header">
+					<div class="profile-header-left admin">
+						<img src="../../img/profile_chunkeat.jpg" alt="" />
+					</div>
+					<div class="profile-header-right">
+						<span class="profile-name">Abu Becker</span>
+						<span class="profile-username">@abubeckkker</span>
+					</div>
+				</div>
+				<form action="">
+					<div class="profile-details">
+						<div class="profile-details-row">
+							<!-------- first name field ------->
+							<div class="render_data">
+								<span class="label">First Name</span>
+								<span class="data">Abu</span>
+								<!-- <input type="text" class="data" value="Abu" /> -->
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email is required.</span>
+								</div>
+							</div>
+
+							<!-------- last name field ------->
+							<div class="render_data">
+								<span class="label">Last Name</span>
+								<span class="data">Becker</span>
+								<!-- <input type="text" class="data" value="" /> -->
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email is required.</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="profile-details-row">
+							<!-------- username field ------->
+							<div class="render_data">
+								<span class="label">Username</span>
+								<span class="data">abubeckkker</span>
+								<!-- <input type="text" class="data" value="" /> -->
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email is required.</span>
+								</div>
+							</div>
+
+							<!-------- email field ------->
+							<div class="render_data">
+								<span class="label">Email Address</span>
+								<span class="data">abubecker@gmail.com</span>
+								<!-- <input type="email" class="data" value="" /> -->
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email is required.</span>
+								</div>
+							</div>
+						</div>
+						<div class="profile-details-row">
+							<div class="render_data">
+								<!-------- password field ------->
+								<span class="label">Password</span>
+								<span class="data">12345678</span>
+								<!-- <input
+									type="password"
+									name="txtPassword"
+									class="data"
+									id="password"
+									minlength="8"
+									value="12345678"
+								/>
+                                <i
+									class="bx bx-hide"
+									id="pass-icon1"
+									onclick="pass('password', 'pass-icon1')"
+								></i> -->
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email is required.</span>
+								</div>
+							</div>
+
+							<!-------- extra field (the opacity is 0, use to just deco)------->
+							<div class="render_data opacity-no">
+								<span class="label">Last Name</span>
+								<span class="data">Becker</span>
+								<!-- <input type="text" class="data" value="" /> -->
+								<div class="error">
+									<i class="bx bx-error-circle"></i>
+									<span>Username or email is required.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="profile-action">
+						<!-- <button class="btn-edit">Edit Profile</button> -->
+						<input
+							type="submit"
+							class="btn-edit"
+							value="Save Changes"
+						/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

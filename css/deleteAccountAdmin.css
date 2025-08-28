@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Crimson Pro", serif;
+}
+
+body {
+	background-color: #1c253b;
+	background-image: url(../img/background.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.card{
+	max-width: 450px;
+	margin: 65px auto;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 0 60px #111a26;
+	background-color: #f3f2ff;
+}
+
+.card-header{
+	text-align: center;
+	margin-top: 0;
+}
+
+.card-body{
+	max-width: 450px;
+	margin-top: -80px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #f3f2ff;
+}
+
+.form-control{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.form-control i{
+	font-size: 20px;
+	margin: auto 0;
+	margin-right: 9px;
+	margin-bottom: 30px;
+}
+
+.form-control input{
+	width: 270px;
+	padding: 10px;
+	border-radius: 20px;
+	border: solid #33384f;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.error{
+	margin: 8px auto;
+	color: red;
+	font-size: 15px;
+	margin: 2px 0px 10px 60px;
+	display: flex;
+	visibility: visible;
+}
+
+.error i{
+	margin-right: 10px;
+	margin-top: -8px
+}
+
+.error span{
+	padding-top: -20px ;
+	padding-left: -20px;
+	font-size: 15px;
+	margin-top: -10px;
+}
+
+.btn{
+	display: flex;
+	justify-content: center;
+	margin: 60px auto;
+	margin-bottom: 0px;
+	width: 300px;
+	margin-top:30px ;
+	
+}
+
+.confirm input {
+    text-align: center;
+    width: max-content;
+    border: solid #33384f;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #1c253b; /* Set the text color explicitly */
+	color: #f3f2ff;
+}
