@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy</title>
+
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Unbounded:wght@200..900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
+
+    <!-- Icon -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/privacy_terms.css" />
+
+    <!-- JS -->
+    <script src="../js/scroll_privacy_terms.js" defer></script>
+</head>
+
+<body>
+    <!-- Include navigational bar -->
+    <?php include 'nav.php'; ?>
+
+    <div class="main-title">
+        <div class="container container-flex-r">
+            <div class="container-flex-c">
+                <span class="date">UPDATED: MAY 20, 2024</span>
+                <span class="title">Privacy Policy</span>
+                <span class="desc">Dive into the data KwazeEdu collects about you. Here we
+                    explain what we collect and when we collect it. You can
+                    also learn about how it's used - and as importantly, how
+                    it's not used. Lastly, let's walk through how you can
+                    control and manage this data.
+                </span>
+            </div>
+            <div class="image">
+                <img src="../img/privacy.svg" alt="Privacy Policy image" />
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container container-flex-r">
+            <div class="list-content flex-c">
+                <span class="sub-title"><span class="num" id="1">1.</span>Introduction</span>
+                <span class="details">
+                    KwazeEdu is a online e-learning platform provide for
+                    individuals with dyslexia disability, our website
+                    support them by providing several functions like
+                    e-learning resources and quiz attempting session.
+                </span>
+                <span class="sub-title"><span class="num" id="2">2.</span>Information We
+                    Collected</span>
+                <span class="details">
+                    We collect personal data from user which include name,
+                    email, country information, and usage data like quiz
+                    marks record and login information.
+                </span>
+                <span class="sub-title"><span class="num" id="3">3.</span>How We Use
+                    Information</span>
+                <span class="details">
+                    We collect the information for analysis purposes, we
+                    analyze the user experience and ensuring all the
+                    features are accessible for dyslexic user.
+                </span>
+                <span class="sub-title"><span class="num" id="4">4.</span>Data Security</span>
+                <span class="details">
+                    We will assure that all the security measures are in
+                    place for all the users in order to protect their data,
+                    including encryption, secure servers and access control.
+                </span>
+                <span class="sub-title"><span class="num" id="5">5.</span>User Rights</span>
+                <span class="details">
+                    At KwazeEdu, we respect your privacy and provide you
+                    with certain rights regarding your personal information.
+                    This section outlines your rights and how you can
+                    exercise them:
+                </span>
+                <div class="details-list-container">
+                    <span class="details-list">Access and Correction:
+                    </span>
+                    <span class="details">
+                        You have the right to access the personal
+                        information we hold about you and request
+                        corrections or updates if it is inaccurate or
+                        incomplete. User may also update their personal
+                        information through the function in our website.
+                    </span>
+                </div>
+                <div class="details-list-container">
+                    <span class="details-list">Data Deletion: </span>
+                    <span class="details">
+                        You can request the deletion of your personal
+                        information from our systems under certain
+                        circumstances, such as when the data is no longer
+                        necessary for the purposes for which it was
+                        collected or if you withdraw your consent.
+                    </span>
+                </div>
+                <span class="sub-title"><span class="num" id="6">6.</span>Updates to Privacy
+                    Policy</span>
+                <span class="details">
+                    Please be noted that the privacy policy may be updated
+                    periodically, we will be notify the user if changes
+                    apply.
+                </span>
+                <span class="sub-title">
+                    <span class="num" id="7">7.</span>Contact Information
+                </span>
+                <span class="details">
+                    After the user leaving their email during registration,
+                    we will be contacting user through it if privacy
+                    concerns apply.
+                </span>
+            </div>
+            <div class="nav-content">
+                <span>ON THIS PAGE</span>
+                <ul>
+                    <li>
+                        <a href="#1">1. Introduction</a>
+                    </li>
+                    <li>
+                        <a href="#2">2. Information We Collected</a>
+                    </li>
+                    <li>
+                        <a href="#3">3. How We Use Information</a>
+                    </li>
+                    <li>
+                        <a href="#4">4. Data Security</a>
+                    </li>
+                    <li>
+                        <a href="#5">5. User Rights</a>
+                    </li>
+                    <li>
+                        <a href="#6">6. Updates to Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#7">7. Contact Information</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include footer -->
+    <?php include 'footer.php'; ?>
+
+</body>
+
+</html>
